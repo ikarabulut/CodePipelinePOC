@@ -9,14 +9,19 @@ phases:
     commands:
       - echo Entered the pre_build phase...
       - dotnet restore MinimalApi/MinimalApi.sln
+      - dotnet test MinimalApi/MinimalApi.sln
 
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - dotnet build MinimalApi/MinimalApi.sln
+      - dotnet publish MinimalApi/src/MinimalApi.csproj -r linux-x64 --self-contained=true -c Release -o release /p:PublishSingleFile=true
 
   post_build:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
+
+  artifacts:
+    files:
+      - release/MinimalApi
