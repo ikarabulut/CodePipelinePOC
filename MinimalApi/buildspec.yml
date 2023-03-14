@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0
+
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+      - dotnet restore MinimalApi/src/MinimalApi.csproj
+
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - dotnet build
+
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
