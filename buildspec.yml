@@ -14,7 +14,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - dotnet build
+      - dotnet build MinimalApi/src/MinimalApi.sln
 
   post_build:
     commands:
