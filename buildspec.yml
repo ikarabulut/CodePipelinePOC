@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-      - dotnet restore MinimalApi/src/MinimalApi.csproj
+      - dotnet restore MinimalApi/MinimalApi.sln
 
   build:
     commands:
