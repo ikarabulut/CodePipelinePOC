@@ -3,7 +3,7 @@ Description=.NET Minimal API
 
 [Service]
 WorkingDirectory=/var/minimalapi/
-ExecStart=bash MinimalApi
+ExecStart=MinimalApi
 Restart=always
 
 RestartSec=10
