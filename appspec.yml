@@ -11,7 +11,7 @@ hooks:
       timeout: 120
       runas: root
   ApplicationStop:
-    - location: deploy-script/stop_app.sh
+    - location: deploy-scripts/stop_app.sh
       timeout: 120
       runas: root
   ApplicationStart:
