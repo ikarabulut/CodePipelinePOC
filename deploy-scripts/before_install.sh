@@ -1,2 +1,2 @@
-rm -rf /var/minimalapi/*
+rm -rf /var/minimalApi/*
 rm -rf /etc/systemd/system/minimalapi.service
