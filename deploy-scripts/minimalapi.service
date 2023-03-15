@@ -1,7 +1,7 @@
 [Unit]
 Description=.NET Minimal API
 
-[Service}
+[Service]
 WorkingDirectory=/var/minimalapi/
 ExecStart=bash MinimalApi
 Restart=always
