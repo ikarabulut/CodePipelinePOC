@@ -2,9 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: release
-    destination: /var/minimalApi
+    destination: /opt/
   - source: deploy-scripts/minimalapi.service
     destination: /etc/systemd/system
+  - source: deploy-scripts/start_minimalApi.sh
+    destination: /usr/bin
 hooks:
   BeforeInstall:
     - location: deploy-scripts/before_install.sh

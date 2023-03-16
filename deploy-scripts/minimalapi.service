@@ -2,15 +2,14 @@
 Description=.NET Minimal API
 
 [Service]
-WorkingDirectory=/var/minimalApi/
-ExecStart=/var/minimalApi/MinimalApi
+Type=simple
+WorkingDirectory=/var/minimalApi
+ExecStart=/usr/bin/bash /usr/bin/start_minimalApi.sh
 Restart=always
 
 RestartSec=10
 KillSignal=SIGINT
 SyslogIdentifier=webapi
-Environment=ASPNETCORE_ENVIRONMENT=Production
-Environment=ASPNETCORE_URLS=http://*:5000
 
 [Install]
 WantedBy=multi-user.target
