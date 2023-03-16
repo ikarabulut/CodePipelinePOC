@@ -1,1 +1,1 @@
-systemctl restart minimalapi.service
+systemctl start minimalapi.service
