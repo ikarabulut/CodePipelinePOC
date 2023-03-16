@@ -1,1 +1,1 @@
-systemctl start minimalapi.service
+sudo systemctl start minimalapi.service

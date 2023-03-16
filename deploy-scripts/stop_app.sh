@@ -1,1 +1,1 @@
-systemctl stop minimalapi.service
+sudo systemctl stop minimalapi.service
