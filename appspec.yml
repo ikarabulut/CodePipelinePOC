@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: release
-    destination: /opt/
+    destination: /opt/release
   - source: deploy-scripts/minimalapi.service
     destination: /etc/systemd/system
   - source: deploy-scripts/start_minimalApi.sh
