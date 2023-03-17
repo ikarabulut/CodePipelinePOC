@@ -26,4 +26,4 @@ artifacts:
   files:
     - "release/MinimalApi"
   name:
-    - MinimalApi-$(date +%Y-%m-%d)
+    - MinimalApi-release
