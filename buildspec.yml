@@ -2,8 +2,8 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS
+    runtime-versions:
+      dotnet: latest
 
   pre_build:
     commands:
@@ -24,4 +24,5 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
+    - "release/MinimalApi"
+    - "/deploy-scripts"
