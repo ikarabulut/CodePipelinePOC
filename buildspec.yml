@@ -25,4 +25,5 @@ phases:
 artifacts:
   files:
     - "release/MinimalApi"
+    - "deploy-scripts/*"
   name: MinimalApi-release
