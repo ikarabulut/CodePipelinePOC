@@ -6,15 +6,15 @@ files:
   - source: deploy-scripts/start_minimalApi.sh
     destination: /usr/bin
 hooks:
-  BeforeInstall:
-    - location: deploy-scripts/before_install.sh
+  ApplicationStop:
+    - location: deploy-scripts/kill_container.sh
       timeout: 120
       runas: root
-  ApplicationStop:
-    - location: deploy-scripts/stop_app.sh
+  AfterInstall:
+    - location: deploy-scripts/load_image.sh
       timeout: 120
       runas: root
   ApplicationStart:
-    - location: deploy-scripts/start_app.sh
+    - location: deploy-scripts/start_container.sh
       timeout: 120
       runas: root
