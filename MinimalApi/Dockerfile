@@ -6,5 +6,5 @@ RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
-COPY /app/out .
+COPY --from=sdk /app/out .
 ENTRYPOINT ["dotnet", "MinimalApi.dll"]
