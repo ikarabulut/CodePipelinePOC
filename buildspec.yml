@@ -7,8 +7,8 @@ phases:
 
   pre_build:
     commands:
-      - dotnet restore MinimalApi/MinimalApi.sln
-      - dotnet test MinimalApi/MinimalApi.sln
+      - dotnet restore
+      - dotnet test
 
   build:
     commands:
