@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-pwd
-ls
+cd  /home/ec2-user/app || exit
 docker build -t minimalapi:1.0 .
