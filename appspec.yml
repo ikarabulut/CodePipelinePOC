@@ -1,10 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: deploy-scripts/minimalapi.service
-    destination: /etc/systemd/system
-  - source: deploy-scripts/start_minimalApi.sh
-    destination: /usr/bin
+  - source: /
+    destination: ~/app
+file_exists_behavior: OVERWRITE
+
 hooks:
   ApplicationStop:
     - location: deploy-scripts/kill_container.sh
